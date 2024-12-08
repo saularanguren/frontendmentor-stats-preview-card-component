@@ -7,7 +7,7 @@ export const increase_stats = (array_id, array_number, array_tag) => {
 
         const interval = setInterval(() => {
             document.querySelector(array_id[i]).textContent = count;
-            count++;
+            (array_number[i] > 100) ? count+=9 : count++;
                 
             if(count > array_number[i]) {
                 document.querySelector(array_id[i]).textContent = (count-1) + array_tag[i];
