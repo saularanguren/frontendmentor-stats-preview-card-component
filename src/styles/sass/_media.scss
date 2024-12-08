@@ -1,0 +1,70 @@
+@use 'variables';
+@use 'layout';
+@use 'mixins';
+
+// Media Query for Desktop
+@media (min-width: 80rem) {    
+    .card {
+        @include mixins.size(69.3750rem, 27.8750rem);
+        @include layout.flex(start, space-between, row-reverse);
+        row-gap: 0;
+        
+        &__picture,
+        &__picture img {
+            @include mixins.size(33.7500rem, 27.875rem);
+        }
+
+        &__section,
+        div {
+            text-align: left;
+            align-items: start;
+            row-gap: 0;
+        }
+
+        div { flex-direction: row; }
+    }
+    
+    .section {
+        &__title {
+            @include mixins.size(25.1875rem, 5.5rem);
+            font-size: 2.25rem;
+            line-height: 2.75rem;
+            margin: 4.4375rem 0 1.5625rem 4.5000rem;
+        }
+    
+        &__description {
+            @include mixins.size(23.3750rem, 4.6875rem);
+            margin: 0 0 4.5000rem 4.4375rem;
+        }
+    
+        &__companies {
+            width: 5.1875rem;
+            margin-left: 4.4375rem;
+        }
+    
+        &__templates {
+            width: 4.9375rem;
+            margin-left: 3.9375rem;
+        }
+    
+        &__queries {
+            width: 4.1562rem;
+            margin-left: 3.7500rem;
+        }
+    }
+    
+    .companies {
+        &__number { width: 3.6875rem; }
+        &__title { width: 5.1250rem; }
+    }
+    
+    .templates {
+        &__number { width: 2.7500rem; }
+        &__title { width: 4.8750rem; }
+    }
+    
+    .queries {
+        &__number { width: 4.1250rem; }
+        &__title { width: 3.8125rem; }
+    }
+}

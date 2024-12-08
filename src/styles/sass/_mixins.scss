@@ -1,0 +1,12 @@
+// mixin size: width and height
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+// mixin font_properties: size, family and weight
+@mixin font_properties($size, $family, $weight) {
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+}

@@ -1,0 +1,232 @@
+/*============================== colors ==============================*/
+/*============================== fonts ==============================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  width: 20.4375rem;
+  height: 48.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 1.8125rem;
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.card__picture, .card__picture img {
+  width: 20.4375rem;
+  height: 15rem;
+}
+.card__picture {
+  background-color: hsl(277, 64%, 61%);
+}
+.card__picture img {
+  mix-blend-mode: multiply;
+  opacity: 0.74;
+}
+.card__section,
+.card div {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  row-gap: 1.8125rem;
+  text-align: center;
+}
+
+.section__title {
+  width: 16.5rem;
+  height: 6rem;
+  font-size: 1.75rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 2rem;
+  color: hsl(0, 0%, 100%);
+}
+.section__title span {
+  color: hsl(277, 64%, 61%);
+}
+.section__description {
+  width: 16.5rem;
+  height: 6.25rem;
+  font-size: 0.9375rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  letter-spacing: 0;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.section__companies {
+  width: 16.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+.section__templates {
+  width: 16.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+.section__queries {
+  width: 16.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+}
+.section__companies, .section__templates, .section__queries {
+  text-transform: uppercase;
+  row-gap: 0.125rem;
+}
+
+.companies__number {
+  width: 16.5rem;
+  height: 1.8125rem;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 100%);
+}
+.companies__title {
+  width: 16.5rem;
+  height: 1.5625rem;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.templates__number {
+  width: 16.5rem;
+  height: 1.8125rem;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 100%);
+}
+.templates__title {
+  width: 16.5rem;
+  height: 1.5625rem;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.queries__number {
+  width: 16.5rem;
+  height: 1.8125rem;
+  font-size: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 100%);
+}
+.queries__title {
+  width: 16.5rem;
+  height: 1.5625rem;
+  font-size: 0.75rem;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  letter-spacing: 0.0625rem;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media (min-width: 80rem) {
+  .card {
+    width: 69.375rem;
+    height: 27.875rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    row-gap: 0;
+  }
+  .card__picture, .card__picture img {
+    width: 33.75rem;
+    height: 27.875rem;
+  }
+  .card__section,
+  .card div {
+    text-align: left;
+    align-items: start;
+    row-gap: 0;
+  }
+  .card div {
+    flex-direction: row;
+  }
+  .section__title {
+    width: 25.1875rem;
+    height: 5.5rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 4.4375rem 0 1.5625rem 4.5rem;
+  }
+  .section__description {
+    width: 23.375rem;
+    height: 4.6875rem;
+    margin: 0 0 4.5rem 4.4375rem;
+  }
+  .section__companies {
+    width: 5.1875rem;
+    margin-left: 4.4375rem;
+  }
+  .section__templates {
+    width: 4.9375rem;
+    margin-left: 3.9375rem;
+  }
+  .section__queries {
+    width: 4.1562rem;
+    margin-left: 3.75rem;
+  }
+  .companies__number {
+    width: 3.6875rem;
+  }
+  .companies__title {
+    width: 5.125rem;
+  }
+  .templates__number {
+    width: 2.75rem;
+  }
+  .templates__title {
+    width: 4.875rem;
+  }
+  .queries__number {
+    width: 4.125rem;
+  }
+  .queries__title {
+    width: 3.8125rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

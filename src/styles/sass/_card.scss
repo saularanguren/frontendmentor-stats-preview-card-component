@@ -1,0 +1,127 @@
+@use 'variables';
+@use 'layout';
+@use 'mixins';
+
+.card {
+    @include mixins.size(20.4375rem, 48.75rem);
+    @include layout.flex(center, start, column);
+    row-gap: 1.8125rem;
+
+    background-color: variables.$bg-card;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    &__picture,
+    &__picture img {
+        @include mixins.size(20.4375rem, 15rem);
+    }
+    
+    &__picture {
+        background-color: variables.$violet;
+    }
+
+    &__picture img {
+        mix-blend-mode: multiply;
+        opacity: 0.74;
+    }
+
+    &__section,
+    div {
+        @include layout.flex(center, start, column);
+        row-gap: 1.8125rem;
+        text-align: center;
+    }
+}
+
+.section {
+    &__title {
+        @include mixins.size(16.5rem, 6rem);
+        @include mixins.font_properties(1.75rem, variables.$inter, variables.$bold);
+        letter-spacing: 0;
+        line-height: 2rem;
+        color: variables.$white;
+
+        & span { color: variables.$violet; }
+    }
+
+    &__description {
+        @include mixins.size(16.5000rem, 6.2500rem);
+        @include mixins.font_properties(0.9375rem, variables.$inter, variables.$regular);
+        line-height: 1.5625rem;
+        letter-spacing: 0;
+        color: variables.$clr-description;
+    }
+
+    &__companies {
+        @include mixins.size(16.5000rem, 3.5000rem);
+        @include layout.flex(start, start, column);
+    }
+
+    &__templates {
+        @include mixins.size(16.5000rem, 3.5000rem);
+        @include layout.flex(start, start, column);
+    }
+
+    &__queries {
+        @include mixins.size(16.5000rem, 3.5000rem);
+        @include layout.flex(start, start, column);
+    }
+
+    &__companies,
+    &__templates,
+    &__queries {
+        text-transform: uppercase;
+        row-gap: 0.1250rem;
+    }
+}
+
+.companies {
+    &__number {
+        @include mixins.size(16.5000rem, 1.8125rem);
+        @include mixins.font_properties(1.5000rem, variables.$inter, variables.$bold);
+        letter-spacing: 0;
+        color: variables.$white;
+    }
+
+    &__title {
+        @include mixins.size(16.5000rem, 1.5625rem);
+        @include mixins.font_properties(0.7500rem, variables.$lexend, variables.$regular);
+        line-height: 1.5625rem;
+        letter-spacing: 0.0625rem;
+        color: variables.$clr-statistics;
+    }
+}
+
+.templates {
+    &__number {
+        @include mixins.size(16.5000rem, 1.8125rem);
+        @include mixins.font_properties(1.5000rem, variables.$inter, variables.$bold);
+        letter-spacing: 0;
+        color: variables.$white;
+    }
+
+    &__title {
+        @include mixins.size(16.5000rem, 1.5625rem);
+        @include mixins.font_properties(0.7500rem, variables.$lexend, variables.$regular);
+        line-height: 1.5625rem;
+        letter-spacing: 0.0625rem;
+        color: variables.$clr-statistics;
+    }
+}
+
+.queries {
+    &__number {
+        @include mixins.size(16.5000rem, 1.8125rem);
+        @include mixins.font_properties(1.5000rem, variables.$inter, variables.$bold);
+        letter-spacing: 0;
+        color: variables.$white;
+   }
+
+    &__title {
+        @include mixins.size(16.5000rem, 1.5625rem);
+        @include mixins.font_properties(0.7500rem, variables.$lexend, variables.$regular);
+        line-height: 1.5625rem;
+        letter-spacing: 0.0625rem;
+        color: variables.$clr-statistics;
+    }
+}

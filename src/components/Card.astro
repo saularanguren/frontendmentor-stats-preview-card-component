@@ -1,0 +1,53 @@
+---
+import mobile from '../assets/image-header-mobile.jpg';
+import desktop from '../assets/image-header-desktop.jpg';
+---
+
+<!-- card -->
+<main class="card">
+    
+    <!-- container image -->
+    <picture class="card__picture">
+        <source media="(min-width: 80rem)" srcset={desktop.src}>
+        <img src={mobile.src} alt="image of 3 people in the office">
+    </picture>
+
+    <!-- information -->
+    <section class="card__section">
+        <!-- description -->
+        <h1 class="section__title">Get <span>insights</span> that help your business grow.</h1>
+        <p class="section__description">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+
+        <!-- statistics -->
+        <div>
+            <!-- companies statistics -->
+            <article class="section__companies">
+                <p class="companies__number" id="companies">0</p>
+                <h2 class="companies__title">companies</h2>
+            </article>
+    
+            <!-- templates statistics -->
+            <article class="section__templates">
+                <p class="templates__number" id="templates">0</p>
+                <h2 class="templates__title">templates</h2>
+            </article>
+    
+            <!-- queries statistics -->
+            <article class="section__queries">
+                <p class="queries__number" id="queries">0</p>
+                <h2 class="queries__title">queries</h2>
+            </article>
+        </div>
+    </section>
+    
+</main>
+
+<script>
+import { increase_stats } from "../utils/element-utils";
+
+const ids = ["#companies", "#templates", "#queries"];
+const numbers = [10, 314, 12];
+const tags = ["k+", "", "m+"];
+
+increase_stats(ids, numbers, tags);
+</script>
