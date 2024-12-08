@@ -81,6 +81,7 @@
         @include mixins.font_properties(1.5000rem, variables.$inter, variables.$bold);
         letter-spacing: 0;
         color: variables.$white;
+        text-transform: lowercase;
     }
 
     &__title {
